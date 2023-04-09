@@ -2,39 +2,58 @@
 
 @section('body')
 <?php //dd(auth()->user()['role_id'])?>
-<form style="width: 80%;" method="GET" action="{{ route('addClient') }}">
-@csrf
-<div style="margin-left: 13%;">
-    <input name="role_id" type="hidden" value="5">
-<div class="form-row">
-    <div class="form-group col-md-6"id="nom">
-      <label for="nom">Nom</label>
-      <input type="text" class="form-control" name="nom" placeholder="MERCEDES">
-    </div>
-    <div class="form-group col-md-6" id="prenom">
-      <label for="prenom">Prenom</label>
-      <input type="text" class="form-control" name="prenom" placeholder="Safa">
-    </div>
-
-    <div class="form-group col-md-6">
-      <label for="email">Adresse-Email</label>
-      <input type="email" class="form-control" name="email" placeholder="Email">
-    </div>
-
-    <div class="form-group col-md-6 ">
-      <label for="sociale">Telephone </label>
-      <input type="text" class="form-control" name="telephone" placeholder="666696999">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" name="password" placeholder="Password">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Confirm Password</label>
-      <input type="password" class="form-control" name="password_confirmation" placeholder="Password">
+<div class="d-flex justify-content-center align-items-center text-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 ">
+                <div class="card-body">
+                    <div class="w-314 h-44 ms-5 mt-5 fw-bold fs-3 lh-44 text-dark mb-5" style="font-style: normal;font-weight: 700;font-size: 25px;line-height: 30px;color: #000000;">Créer un compte</div>
+                    
+                    <form  method="GET" action="{{ route('addClient') }}">
+                      @csrf
+                      <input name="role_id" type="hidden" value="5">
+                        <div class="row mb-4" id="nom">
+                            <div class="col-md-3 text-md-end"></div>
+                            <div class="col-md-6">
+                                <input  type="text" class="form-control " name="nom"  required autocomplete="nom" autofocus placeholder="Votre nom">
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-4" id="prenom">
+                            <div class="col-md-3 text-md-end"></div>
+                            <div class="col-md-6">
+                                <input  type="text" class="form-control " name="prenom"  required autocomplete="prenom" autofocus placeholder="Votre prénom">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-3 text-md-end"></div>
+                            <div class="col-md-6">
+                                <input  type="email" class="form-control " name="email"  required autocomplete="email" autofocus placeholder="Adresse-Email">
+                            </div>
+                        </div>
+                        <div class="row mb-4" >
+                            <div class="col-md-3 text-md-end"></div>
+                            <div class="col-md-6">
+                                <input  type="text" class="form-control " name="tel"  required autocomplete="tel" autofocus placeholder="Telephone portable">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-3 text-md-end"></div>
+                            <div class="col-md-6">
+                                <input  type="password" class="form-control " name="password"  required autocomplete="password" autofocus placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-md-3 text-md-end"></div>
+                            <div class="col-md-6">
+                                <input  type="password" class="form-control " name="password_confirmation"  required autocomplete="password_confirmation" autofocus placeholder="Confirm password">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary px-5">Sign in</button>
+                    </form>
+                </div>
+             </div>
+        </div>
     </div>
 </div>
-<button type="submit" class="btn btn-primary">Sign in</button>
-</div>
-</form>
 @endsection
