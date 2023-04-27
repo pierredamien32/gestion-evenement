@@ -73,8 +73,10 @@ class EntrepriseController extends Controller
         $user->notify(new NewEntreprise($temp));
         if( (Auth::check() && Auth::user()['role_id']==1) ||(Auth::check() && Auth::user()['role_id']==3)  ){
             return redirect()->route('adminNotification');
-        }
+        }else{
             return view('entreprise/attente-confirm');
+        }
+            
     }
 
     public function verifyCode (Request $request){

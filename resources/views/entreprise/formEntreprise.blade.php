@@ -92,7 +92,7 @@
                         <div class="row mb-4" id="description">
                             <div class="col-md-3 text-md-end"></div>
                             <div class="col-md-6">
-                                <input  type="text" class="form-control " name="description"  required autocomplete="description" autofocus placeholder="Donnez une description">
+                                <input  type="text" class="form-control entre" name="description"  required autocomplete="description" autofocus placeholder="Donnez une description">
                             </div>
                         </div>
                         <div class="row mb-4">
@@ -115,7 +115,7 @@
     </div>
 </div>
 <script>
-    // Récupérer les éléments HTML
+    //Récupérer les éléments HTML
     var roleSelect = document.querySelector('#role');
     var nomInput = document.querySelector("#nom");
     var prenomInput = document.querySelector("#prenom");
@@ -146,5 +146,27 @@
     });
     
     
+    // const role = document.getElementById('role');
+    // const elementspers = document.querySelectorAll('.pers');
+    // const elementsentre = document.querySelectorAll('.entre');
+    // role.addEventListener('change', () => {
+    //   if (role.value === 'personne') {
+    //     // masquer les champs de formulaire
+    //     elementspers.forEach((element) => {
+    //       element.style.display = '';
+    //     });
+    //     elementsentre.forEach((element) => {
+    //       element.style.display = 'none';
+    //     });
+    //   } else {
+    //     // afficher les champs de formulaire
+    //     elementspers.forEach((element) => {
+    //       element.style.display = 'none';
+    //     });
+    //     elementsentre.forEach((element) => {
+    //       element.style.display = '';
+    //     });
+    //   }
+    // });
 </script>
 @endsection
